@@ -5,6 +5,7 @@ ref [jayharris/dotfiles-windows](https://github.com/jayharris/dotfiles-windows)
 ## windows
 
 winget install 9MZ1SNWT0N5D # install powershell
+
 winget install 9MTCFHS560NG # install watt toolkit
 
 press key win+x a (terminal(administrator)) 按快捷键win+x a (终端（管理员))
