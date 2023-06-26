@@ -1,0 +1,48 @@
+! 2023-03-19 https://tieba.baidu.com
+tieba.baidu.com##[ad-dom-img=true]
+tieba.baidu.com##.notice-wrap-fixed.notice-wrap-top.notice_item.item
+tieba.baidu.com##.clearfix.top-sec
+tieba.baidu.com###spage_game_tab_wrapper
+tieba.baidu.com##.app_download_box
+tieba.baidu.com###fixed_bar
+tieba.baidu.com##.celebrity.region_bright
+tieba.baidu.com##.notice_item.item
+tieba.baidu.com##.popup_icon_left.popup_vertical.tbshare_popup_wrapper
+tieba.baidu.com###spage-tbshare-container
+tieba.baidu.com##.ec-comp_sticker
+! 2023-03-30 https://tieba.baidu.com
+tieba.baidu.com###pagelet_frs-aside\/pagelet\/aside_ad
+tieba.baidu.com##.tbui_aside_float_bar + .clearfix
+tieba.baidu.com##.fengchao-wrap-feed
+tieba.baidu.com##div.thread_item_box.clearfix
+tieba.baidu.com###aside-ad-wrapper
+tieba.baidu.com##.aside-wrapper
+
+! 2023-03-19 https://www.zhihu.com
+www.zhihu.com##.Banner-link
+
+! 2023-03-28 https://cupfox.app
+cupfox.app##div.cupfox-box.jsx-1833760314
+
+! 2023-03-28 https://mail.zoho.com.cn
+mail.zoho.com.cn###zmStreamTree
+mail.zoho.com.cn##.rhsBottomNav.zmRhsNav
+mail.zoho.com.cn##.ZDarkTheme.zwZHamburger
+mail.zoho.com.cn##.zmRhsBar
+
+! 2023-03-28 https://askubuntu.com
+askubuntu.com##.js-consent-banner.r16.l16.b16.bar-lg.fc-white.bg-black-750.sm\:p16.p32.sm\:w-auto.ws4.z-nav-fixed.ps-fixed.ff-sans
+! 2023-03-28 https://stackoverflow.com
+stackoverflow.com##.js-consent-banner.r16.l16.b16.bar-lg.fc-white.bg-black-750.sm\:p16.p32.sm\:w-auto.ws4.z-nav-fixed.ps-fixed.ff-sans
+
+! 2023-03-28 https://fanyi.youdao.com
+fanyi.youdao.com##.footer
+
+! 2023-04-12 https://fanyi.youdao.com
+fanyi.youdao.com##.inner-content
+
+! 2023-05-09 https://tieba.baidu.com
+tieba.baidu.com##.right_bright.right_section
+
+! 2023-05-24 https://www.bilibili.com
+www.bilibili.com##.adblock-tips

@@ -1,0 +1,10 @@
+{
+  "workbench.colorTheme": "Default Light Modern",
+  "editor.fontFamily": "'MesloLGM NF', 'MesloLGM', 'Microsoft YaHei', monospace",
+  "editor.fontWeight": "normal",
+  "editor.wordWrap": "on",
+  "editor.indentSize": 2,
+  "editor.tabSize": 2,
+  "editor.fontLigatures": true,
+  "window.newWindowDimensions": "maximized"
+}
