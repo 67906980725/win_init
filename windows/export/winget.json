@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2023-06-25T11:44:01.245-00:00",
+	"CreationDate" : "2023-06-27T18:13:27.870-00:00",
 	"Sources" : 
 	[
 		{
@@ -52,16 +52,13 @@
 					"PackageIdentifier" : "Valve.Steam"
 				},
 				{
-					"PackageIdentifier" : "Tencent.WeChat"
-				},
-				{
 					"PackageIdentifier" : "ByteDance.Douyin"
 				},
 				{
 					"PackageIdentifier" : "EuSoft.Eudic"
 				},
 				{
-					"PackageIdentifier" : "Tencent.QQ"
+					"PackageIdentifier" : "junegunn.fzf"
 				},
 				{
 					"PackageIdentifier" : "Rustlang.Rust.MSVC"
@@ -110,6 +107,9 @@
 				},
 				{
 					"PackageIdentifier" : "9MZ1SNWT0N5D"
+				},
+				{
+					"PackageIdentifier" : "XPFCKBRNFZQ62G"
 				},
 				{
 					"PackageIdentifier" : "XP89DCGQ3K6VLD"

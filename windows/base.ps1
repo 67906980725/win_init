@@ -2,23 +2,23 @@
 . ../conf/Documents/PowerShell/env.ps1
 
 # install Eassos.DiskGenius
-# install Microsoft.VisualStudioCode
-# # install Git.Git --override "/VerySilent /NoRestart /o:PathOption=CmdTools /Components=""icons,assoc,assoc_sh,gitlfs"""
-# install Git.Git
-# install Neovim.Neovim
-# install WinMerge.WinMerge
-# install Google.PlatformTools
-# install SyncTrayzor.SyncTrayzor
 # install 9P1WXPKB68KX # Snipaste 改截图快捷键
 # install XPFFH613W8V6LV # obs studio 必要设置:视频输出改高级-mp4,调整输出大小（源大小）
 # install GyDi.ClashVerge 
-# install 9P3JFR0CLLL6 # mpv
-# install Gyan.FFmpeg.Shared
-# install Alibaba.aDrive
-# install XP9KLMLD6NRZC5 # 有道翻译
+# install SyncTrayzor.SyncTrayzor
 # install EuSoft.Eudic
-# install Valve.Steam
+# install XP9KLMLD6NRZC5 # 有道翻译
+# install Alibaba.aDrive
+# install Google.PlatformTools
+# install Gyan.FFmpeg.Shared
+# install Git.Git
+# install Neovim.Neovim
+# install junegunn.fzf
+# install WinMerge.WinMerge
 # install Microsoft.VCRedist.2015+.x64
+# install Microsoft.VisualStudioCode
+# install 9P3JFR0CLLL6 # mpv
+# install Valve.Steam
 # install XPDDVC6XTQQKMM # bilibili
 
 # winget export --output ./export/winget.json
