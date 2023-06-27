@@ -21,9 +21,11 @@ install 9P2JFQ43FPPG # APK Installers
 explorer https://www.coolapk.com/ # 下载酷安
 
 # 安装 wsa
+
 #  用APK 安装程序打开 会提示下载 adb 和适用于 android 的 windows 子系统 
 #  或以下命令?
 Add-AppxPackage -Path MicrosoftCorporationII.WindowsSubsystemForAndroid_1.8.32822.0_neutral___8wekyb3d8bbwe.Msixbundle
+
 #  老电脑商店不允许安装 wsa 的参考离线安装
 #   教程 https://tsukkomi.org/post/bypass-the-limitation-to-install-windows-subsystem-for-android-aka-wsa
 #   下载页 https://store.rg-adguard.net/  productId: 9P3395VX91NR  fast  最下边 MicrosoftCorporationII.WindowsSubsystemForAndroid_2304.40000.7.0_neutral_~_8wekyb3d8bbwe.msixbundle
