@@ -17,23 +17,15 @@ Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 git clone --depth 1 git@github.com:67906980725/win_init.git
-Set-Location ./win_init/windows
+Set-Location ./win_init
 ./init.ps1
 ```
 
-## ubuntu
+## linux
 
 bash
 
 ``` bash
-cd ./win_init/ubuntu
-bash init.sh
-cd ../
-```
-
-powershell
-
-``` pwsh
-Set-Location ./linux
-./init.ps1
+cd ./win_init
+bash ./init.sh
 ```

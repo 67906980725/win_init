@@ -3,4 +3,4 @@
 ./base.ps1
 ./pwsh.ps1
 ./ssh.ps1
-./wsl.ps1
+./administor.ps1

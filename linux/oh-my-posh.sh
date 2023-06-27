@@ -9,3 +9,9 @@ wget ${github_px}https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/do
 unzip ~/.poshthemes/themes.zip -d ~/.poshthemes
 chmod u+rw ~/.poshthemes/*.json
 rm ~/.poshthemes/themes.zip
+
+cur_dir="$(pwd)"
+cur_file_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+cd "$cur_file_dir"
+pwsh ./init.ps1
+cd "$cur_dir"

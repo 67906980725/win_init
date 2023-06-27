@@ -29,14 +29,14 @@ install_import ./export/winget.json
 Set-Environment "EDITOR" "nvim --nofork"
 Set-Environment "GIT_EDITOR" $Env:EDITOR
 
-cp_conf AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe # terminal
+cp_conf AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe # terminal
 
-cp_conf AppData\Roaming\Code\User\settings.json # vscode
+cp_conf AppData/Roaming/Code/User/settings.json # vscode
 
-install_local .\pkg\setup_ClickMonitorDDC_7_2.exe
-cp_conf AppData\Roaming\ClickMonitorDDC # ctrl+alt+shift+{9/0/-/=} 调音量/亮度
+install_local ./pkg/setup_ClickMonitorDDC_7_2.exe
+cp_conf AppData/Roaming/ClickMonitorDDC # ctrl+alt+shift+{9/0/-/=} 调音量/亮度
 
-.\traffic_monitor.ps1
-.\free_file_sync.ps1
+./traffic_monitor.ps1
+./free_file_sync.ps1
 
 # explorer https://www.gyan.dev/ffmpeg/builds/ # ffmpeg

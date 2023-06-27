@@ -1,5 +1,6 @@
 . ./util.ps1
-../base/font.ps1
+. ../base/font.ps1
+
 function install_font($dir_name) {
   $fonts=(New-Object -ComObject Shell.Application).Namespace(20)
   Get-ChildItem -Path "$home/Downloads/$dir_name" -Filter *.ttf | ForEach-Object {
