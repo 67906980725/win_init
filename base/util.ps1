@@ -1,4 +1,4 @@
-$GITHUB_PROXY="https://gh.ddlc.top/"
+$GITHUB_PROXY="https://js.xxooo.ml/"
 function cp_conf($path) { 
   $p_dir = Split-Path -parent $home/$path
   Copy-Item -Path ../conf/$path -Destination $p_dir -Recurse -Force
