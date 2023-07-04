@@ -15,9 +15,14 @@ ${function:doc} = { Set-Location ~/Documents }
 # ${function:dt} = { Set-Location ~/Desktop }
 # ${function:drop} = { Set-Location ~/Documents/Dropbox }
 
+function New-Directory([String] $path) { 
+  New-Item $path -ItemType Directory -ErrorAction SilentlyContinue
+}
+Set-Alias mkdir New-AndSet-Directory
 # Create a new directory and enter it 创建一个文件夹并进入
 function New-AndSet-Directory([String] $path) { 
-  New-Item $path -ItemType Directory -ErrorAction SilentlyContinue; Set-Location $path
+  New-Directory $path
+  Set-Location $path
 }
 Set-Alias mkd New-AndSet-Directory
 # Determine size of a file or total size of a directory 确定文档的大小或目录的总大小

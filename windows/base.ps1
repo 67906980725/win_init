@@ -8,6 +8,7 @@
 # install SyncTrayzor.SyncTrayzor
 # install EuSoft.Eudic
 # install XP9KLMLD6NRZC5 # 有道翻译
+# install XPFP03DHSN0S5K # qq
 # install Alibaba.aDrive
 # install Google.PlatformTools
 # install Gyan.FFmpeg.Shared
