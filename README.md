@@ -13,9 +13,7 @@ winget install 9MTCFHS560NG # install watt toolkit
 pwsh
 
 ``` pwsh
-Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-
 git clone --depth 1 git@github.com:67906980725/win_init.git
 Set-Location ./win_init
 ./init.ps1
