@@ -4,9 +4,22 @@ $install_dir = "$I_APP_PATH${PATH_SEPARATOR}aria2"
 
 # require admin
 function auto_start {
-    $trigger = New-ScheduledTaskTrigger -AtStartup 
-    $action = New-ScheduledTaskAction -Execute "$install_dir${PATH_SEPARATOR}aria2c.exe" -Argument "--conf-path=$install_dir${PATH_SEPARATOR}aria2.conf --input-file=$install_dir${PATH_SEPARATOR}aria2.session --save-session=$install_dir${PATH_SEPARATOR}aria2.session"
-    Register-ScheduledTask -TaskName "aria2" -Trigger $trigger -Action $action
+
+  "
+  `$process = Get-Process -Name 'aria2c' -ErrorAction SilentlyContinue
+  if (!`$process) {
+      Start-Process -FilePath ""$install_dir${PATH_SEPARATOR}aria2c.exe"" -ArgumentList ""--conf-path=$install_dir${PATH_SEPARATOR}aria2.conf"", ""--input-file=$install_dir${PATH_SEPARATOR}aria2.session"", ""--save-session=$install_dir${PATH_SEPARATOR}aria2.session""
+  }
+  " | Out-File -FilePath $install_dir/run.ps1
+  $trigger0 = New-ScheduledTaskTrigger -AtStartup 
+  $trigger1 = New-ScheduledTaskTrigger -AtLogOn -User $env:USERNAME
+  $trigger2 = New-ScheduledTaskTrigger -Daily -At 00:00 -DaysInterval 1
+  $trigger3 = New-ScheduledTaskTrigger -Daily -At 00:30 -DaysInterval 1
+  $trigger4 = New-ScheduledTaskTrigger -Once -At (Get-Date) -RepetitionDuration (New-TimeSpan -Minutes 30) -RepetitionInterval (New-TimeSpan -Minutes 30)
+  # $action = New-ScheduledTaskAction -Execute "$install_dir${PATH_SEPARATOR}aria2c.exe" -Argument "--conf-path=$install_dir${PATH_SEPARATOR}aria2.conf --input-file=$install_dir${PATH_SEPARATOR}aria2.session --save-session=$install_dir${PATH_SEPARATOR}aria2.session"
+  $action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-ExecutionPolicy Bypass -File $install_dir${PATH_SEPARATOR}run.ps1"
+  Register-ScheduledTask -TaskName "aria2" -Trigger $trigger0, $trigger1, $trigger2, $trigger3, $trigger4 -Action $action
+  powershell.exe
 }
 
 function install_aria2 {
@@ -24,7 +37,7 @@ function install_aria2 {
 
   "" | Out-File $install_dir/aria2.session -NoNewline
   cp_conf ".local/app/aria2/aria2.conf"
-  (Get-Content "$install_dir/aria2.conf") | Foreach-Object { $_ -replace '^dir=.*', "dir=$DOWN_PATH";  } | Set-Content "$install_dir/aria2.conf"
+  (Get-Content "$install_dir/aria2.conf") | Foreach-Object { $_ -replace '^dir=.*', "dir=$DOWN_PATH"; } | Set-Content "$install_dir/aria2.conf"
 }
 
 function install_aria_ng {
