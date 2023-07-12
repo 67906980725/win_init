@@ -62,7 +62,7 @@ Set-Alias reload Initialize-Powershell
 
 
 # su & sudo
-function Open-Admin-Shell { Start-Process powershell -Verb runAs }
+function Open-Admin-Shell { Start-Process pwsh -Verb runAs }
 Set-Alias su Open-Admin-Shell
 function Invoke-As-Admin() {
   if ($args.Length -eq 1) {

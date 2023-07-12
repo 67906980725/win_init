@@ -2,15 +2,6 @@
 
 # https://zhuanlan.zhihu.com/p/431557897
 
-if (!(Test-Elevated)) {
-  $newProcess = new-object System.Diagnostics.ProcessStartInfo "PowerShell";
-  $newProcess.Arguments = $myInvocation.MyCommand.Definition;
-  $newProcess.Verb = "runas";
-  [System.Diagnostics.Process]::Start($newProcess);
-
-  exit
-}
-
 # 开启虚拟机平台
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 

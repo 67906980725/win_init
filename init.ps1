@@ -1,3 +1,4 @@
+# 需要以终端管理员运行
 if ($IsWindows) {
   Push-Location ./windows
   ./init_windows.ps1

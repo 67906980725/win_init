@@ -39,5 +39,6 @@ cp_conf AppData/Roaming/ClickMonitorDDC # ctrl+alt+shift+{9/0/-/=} 调音量/亮
 
 ./traffic_monitor.ps1
 ./free_file_sync.ps1
+./aria2.ps1
 
 # explorer https://www.gyan.dev/ffmpeg/builds/ # ffmpeg
