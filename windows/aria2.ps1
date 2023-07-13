@@ -10,9 +10,6 @@ function install_aria2 {
   "" | Out-File $install_dir/aria2.session -NoNewline
   cp_conf ".local/app/aria2/aria2.conf"
   (Get-Content "$install_dir/aria2.conf") | Foreach-Object { $_ -replace '^dir=.*', "dir=$DOWN_PATH"; } | Set-Content "$install_dir/aria2.conf"
-
-  cp_conf ".local/app/aria2/update_bt_tracker.ps1"
-  pwsh $install_dir/update_bt_tracker.ps1
 }
 
 function auto_start {
@@ -25,6 +22,21 @@ function auto_start {
   $l.Save()
 
   Copy-Item -Path $l_file -Destination "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup" -Force  
+}
+
+function update_bt_tracker {
+  cp_conf ".local/app/aria2/update_bt_tracker.ps1"
+  pwsh $install_dir/update_bt_tracker.ps1
+
+
+  $l_file = "$install_dir\update_bt_tracker.lnk"
+  
+  $l = (New-Object -ComObject WScript.Shell).CreateShortcut($l_file)
+  $l.WorkingDirectory = $install_dir
+  $l.TargetPath = "pwsh.exe"
+  $l.Arguments = "-File update_bt_tracker.ps1"
+  $l.Save()
+  # 快捷方式执行脚本后不关闭shell: windows_terminal-默认值-高级-关闭行为:仅进程成功退出时关闭(或从不关闭)
 }
 
 function install_aria_ng {
@@ -58,8 +70,9 @@ function install_aria2_bak {
 }
 
 
-install_aria2
-auto_start
-install_aria_ng
+# install_aria2
+# auto_start
+update_bt_tracker
+# install_aria_ng
 
 # https://www.cnblogs.com/alphaprime/p/15781824.html

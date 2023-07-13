@@ -45,6 +45,7 @@
         {
             "backgroundImage": "desktopWallpaper",
             "backgroundImageOpacity": 0.18,
+            "closeOnExit": "graceful",
             "colorScheme": "Campbell",
             "cursorShape": "emptyBox",
             "font": 
@@ -90,6 +91,18 @@
                 "hidden": true,
                 "name": "Ubuntu",
                 "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{2898a0e6-76c5-5d10-b71b-1ede1970437c}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2019",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{f8484c4f-da7e-5342-ae87-d5568d994555}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2019",
+                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
@@ -371,5 +384,6 @@
                 "useMica": false
             }
         }
-    ]
+    ],
+    "windowingBehavior": "useExisting"
 }

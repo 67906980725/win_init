@@ -1,4 +1,4 @@
-$GITHUB_PROXY="https://gh.ddlc.top"
+$GITHUB_PROXY="https://cors.isteed.cc/"
 function Git_Quick_Push {
   param(
       [string]$m = "update",
