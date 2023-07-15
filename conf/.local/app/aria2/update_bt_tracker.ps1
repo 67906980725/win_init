@@ -27,4 +27,9 @@ function update_bt_tracker {
   $tks = $tks -join ","
   (Get-Content "$PSScriptRoot/aria2.conf") | Foreach-Object { $_ -replace '^bt-tracker=.*', "bt-tracker=$tks" } | Set-Content "$PSScriptRoot/aria2.conf"
 }
-update_bt_tracker
+
+
+while($true) {
+  update_bt_tracker
+  Start-Sleep -Seconds 3600 # 3600s
+}
