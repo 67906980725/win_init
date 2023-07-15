@@ -1,6 +1,6 @@
 . ./util.ps1
 
-$install_dir = "$I_APP_PATH${PATH_SEPARATOR}aria2"
+$install_dir = "$APP_PATH${PATH_SEPARATOR}aria2"
 
 
 function install_aria2 {
@@ -35,10 +35,8 @@ function update_bt_tracker {
   $l.TargetPath = "pwsh.exe"
   $l.Arguments = "-File update_bt_tracker.ps1"
   $l.Save()
-  # 快捷方式执行脚本后不关闭shell: windows_terminal-默认值-高级-关闭行为:仅进程成功退出时关闭(或从不关闭)
 
   Copy-Item -Path $l_file -Destination "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup" -Force
-
   # pwsh $install_dir/update_bt_tracker.ps1
 }
 
@@ -47,8 +45,8 @@ function install_aria_ng {
   $ng_f_name = "AriaNg-$ng_ver-AllInOne.zip"
   dw_git_extract -url "https://github.com/mayswind/AriaNg/releases/download/$ng_ver/$ng_f_name" -f_name "$ng_f_name" -dir_name "aria_ng"
 
-  Move-Item -Path $DOWN_PATH/aria_ng -Destination $I_APP_PATH -Force
-  Rename-Item -Path $I_APP_PATH/aria_ng/index.html -NewName aria_ng.html -Force
+  Move-Item -Path $DOWN_PATH/aria_ng -Destination $APP_PATH -Force
+  Rename-Item -Path $APP_PATH/aria_ng/index.html -NewName aria_ng.html -Force
 
   # 也可以用浏览器扩展接管aria2
   # https://microsoftedge.microsoft.com/addons/detail/aria2-explorer/jjfgljkjddpcpfapejfkelkbjbehagbh?hl=zh-CN  
@@ -64,8 +62,8 @@ function install_aria2_bak {
 
   Invoke-WebRequest ${GITHUB_PROXY}https://github.com/aria2/aria2/releases/download/release-$ver/$f_name -OutFile $DOWN_PATH/$f_name
 
-  Expand-Archive -Force -Path $DOWN_PATH/$f_name -DestinationPath $I_APP_PATH
-  Rename-Item -Path $I_APP_PATH/$d_name -NewName aria2 -Force
+  Expand-Archive -Force -Path $DOWN_PATH/$f_name -DestinationPath $APP_PATH
+  Rename-Item -Path $APP_PATH/$d_name -NewName aria2 -Force
 
   "" | Out-File $install_dir/aria2.session -NoNewline
   cp_conf ".local/app/aria2/aria2.conf"

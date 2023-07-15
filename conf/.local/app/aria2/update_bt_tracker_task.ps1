@@ -23,7 +23,8 @@ function dw_git_extract {
 
 function update_bt_tracker {
   dw_git_extract -url "https://github.com/ngosang/trackerslist/archive/refs/heads/master.zip" -f_name "trackerslist.zip" -dir_name ""
-  $tks = (Get-Content "$DOWN_PATH/trackerslist-master/trackers_best.txt") | Where-Object { $_ -match '\S' }
+  # $tks = (Get-Content "$DOWN_PATH/trackerslist-master/trackers_best.txt") | Where-Object { $_ -match '\S' }
+  $tks = (Get-Content "$DOWN_PATH/trackerslist-master/trackers_all.txt") | Where-Object { $_ -match '\S' }
   $tks = $tks -join ","
   (Get-Content "$PSScriptRoot/aria2.conf") | Foreach-Object { $_ -replace '^bt-tracker=.*', "bt-tracker=$tks" } | Set-Content "$PSScriptRoot/aria2.conf"
 }
