@@ -25,18 +25,18 @@ function auto_start_aria2 {
 }
 
 function update_bt_tracker {
-  cp_conf ".local/app/aria2/update_bt_tracker_task.ps1"
-  "Start-Job -ScriptBlock { & ""$install_dir/update_bt_tracker_task.ps1"" }" | Out-File $install_dir/update_bt_tracker.ps1
+  cp_conf ".local/app/aria2/update_bt_tracker.ps1"
+  # "Start-Job -ScriptBlock { & ""$install_dir/update_bt_tracker_task.ps1"" }" | Out-File $install_dir/update_bt_tracker.ps1
 
   $l_file = "$install_dir\update_bt_tracker.lnk"
-  
   $l = (New-Object -ComObject WScript.Shell).CreateShortcut($l_file)
   $l.WorkingDirectory = $install_dir
   $l.TargetPath = "pwsh.exe"
   $l.Arguments = "-File update_bt_tracker.ps1"
   $l.Save()
+  # Copy-Item -Path $l_file -Destination "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup" -Force
 
-  Copy-Item -Path $l_file -Destination "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup" -Force
+  cp_conf ".local/bin/crons/update_bt_tracks.ps1"
   # pwsh $install_dir/update_bt_tracker.ps1
 }
 
