@@ -36,7 +36,7 @@ function update_bt_tracker {
   $l.Save()
   # Copy-Item -Path $l_file -Destination "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup" -Force
 
-  cp_conf ".local/bin/crons/update_bt_tracks.ps1"
+  cp_conf ".local/bin/crons/update_bt_tracker.ps1"
   # pwsh $install_dir/update_bt_tracker.ps1
 }
 
