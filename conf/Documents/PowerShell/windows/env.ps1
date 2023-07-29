@@ -20,9 +20,10 @@ function Initialize-Environment {
 
 # Set a permanent Environment variable, and reload it into $env
 function Set-Environment([String] $variable, [String] $value) {
-  Set-ItemProperty "HKCU:\Environment" $variable $value
+  #[System.Environment]::SetEnvironmentVariable("$variable", "$value", "User")
   # Manually setting Registry entry. SetEnvironmentVariable is too slow because of blocking HWND_BROADCAST
-  #[System.Environment]::SetEnvironmentVariable("$variable", "$value","User")
+  Set-ItemProperty "HKCU:\Environment" $variable $value
+  # cmd.exe /c "setx $variable $value" # or using cmd.exe
   Invoke-Expression "`$env:${variable} = `"$value`""
 }
 

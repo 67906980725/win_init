@@ -1,6 +1,6 @@
 . ../base/util.ps1
 
-function install($id) { winget install $args --silent --accept-package-agreements $id }
+function install { winget install @args --silent --accept-package-agreements }
 function install_import($path) { winget import -i $path }
 
 function install_local($path) { Start-Process -ArgumentList ‘/s’ -PassThru -FilePath $path}

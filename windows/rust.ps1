@@ -9,3 +9,6 @@ rustup default stable-msvc
 # rustup default stable-x86_64-pc-windows-gnu
 
 cp_conf .cargo
+
+cmd.exe /c "setx RUSTUP_DIST_SERVER https://rsproxy.cn"
+cmd.exe /c "setx RUSTUP_UPDATE_ROOT https://rsproxy.cn/rustup"
