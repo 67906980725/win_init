@@ -37,6 +37,7 @@ cp_conf AppData/Roaming/Code/User/settings.json # vscode
 install_local ./pkg/setup_ClickMonitorDDC_7_2.exe
 cp_conf AppData/Roaming/ClickMonitorDDC # ctrl+alt+shift+{9/0/-/=} 调音量/亮度
 
+./fast_github.ps1
 ./traffic_monitor.ps1
 ./free_file_sync.ps1
 ./aria2.ps1
