@@ -1,4 +1,4 @@
-$GITHUB_PROXY = "https://cors.isteed.cc/"
+$GITHUB_PROXY = $GITHUB_PROXY ?? "https://cors.isteed.cc/"
 
 function dw_git {
   param (
@@ -14,7 +14,10 @@ function dw_git_extract {
     [string] $f_name,
     [string] $dir_name
   )
-  dw_git -url $url -f_name $f_name
+  if (-not (Test-Path "$DOWN_PATH/$f_name")) {
+    dw_git -url $url -f_name $f_name
+  }
   Expand-Archive -Force -Path $DOWN_PATH/$f_name -DestinationPath $DOWN_PATH/$dir_name
-  Remove-Item $DOWN_PATH/$f_name
+
+  # Remove-Item $DOWN_PATH/$f_name
 }
