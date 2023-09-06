@@ -1,5 +1,5 @@
 # quickly connect to sshserver from config file lines 从配置文件选择ssh服务器连接
-# or quickly scp. eg: sshc, shc $home/foo /home/root/foo [-l]
+# or quickly scp. eg: sshc, sshc $home/foo /home/root/foo [-l]
 # require: fzf
 function Connect-Ssh-Server {
   param(
